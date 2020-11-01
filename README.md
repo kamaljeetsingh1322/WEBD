@@ -189,13 +189,7 @@
         }
 */
 
-        .fa-facebook {
-            background: #3B5998;
-            color: white;
-
-
-        }
-
+        
         .center {
             text-align: center;
             width: 20%;
