@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>INFO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+  <link rel="stylesheet" href="css/style.css">
+  <style type="text/css">
+    #info{
+      color:#fff;
+      position:center;
+      transform: translateX(30%);
+
+    }
+
+
+.avatar {
+  vertical-align: middle;
+  width:1.125rem;
+  height:1.125rem;
+  border-radius:50%;
+}
+.responsive {
+  display: block;
+margin:auto;
+  
+  position: center;
+  width: 50%;
+  max-width: 100%;
+  height: 12em;
+
+
+}
+
+  </style>
+ 
+  
+</head>
+<body>
+<div class="container-less">
+  <div class="row no-gutters ">
+    <div class="col-lg-3 left no-gutters"  >
+
+      <div ><a href="#"><img src="image/carousal/person.png" alt="profile pic" class=" center responsive avatar "></a></div>
+
+    <section>
+<p id="info">NAME:</p>
+<a href="#"><p id="info"><i class="fa fa-phone" style="font-size:1.25rem;color:white;"></i>CONTACT</p></a>
+<P  id="info">PROFESSOR:</P>
+<P  id="info">RESEARCH :</P>
+
+</section>
+   <div class="tab">
+  <button class="tablinks" onclick="openlink(event, 'personel details')" id="defaultOpen">personel details</button>
+  <button class="tablinks" onclick="openlink(event, 'research')">research</button>
+  <button class="tablinks" onclick="openlink(event, 'publications')">publications</button>
+  <button class="tablinks" onclick="openlink(event, 'more')">more</button>
+</div>
+
+
+<!--<div class="vertical-menu">
+  <a href="#" class="active">Home</a>
+  <a href="#">link1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  <a href="#">Link 4</a>
+</div>-->
+  
+</div>
+    <div class="col-lg-9 right no-gutters" >
+  
+     <div id="personel details" class="tabcontent">
+  <h3>personel details</h3>
+  <p>personel details</p>
+</div>
+
+<div id="research" class="tabcontent">
+  <h3>research</h3>
+  <p>research</p> 
+</div>
+
+<div id="publications" class="tabcontent">
+  <h3>publications</h3>
+  <p>publications</p>
+</div>
+<div id="more" class="tabcontent">
+  <h3>MORE</h3>
+  <p>IF YOU ARE SEARCHING FOR MORE INFO.........</p>
+</div>
+
+     
+    </div>
+</div>
+    
+  
+</div>
+
+
+
+<script>
+function openlink(evt, linkname) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(linkname).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
