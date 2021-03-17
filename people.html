@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Science & Engg. - Dr B R Ambedkar National Institute of Technology, Jalandhar</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js" integrity="sha512-J9QfbPuFlqGD2CYVCa6zn8/7PEgZnGpM5qtFOBZgwujjDnG5w5Fjx46YzqvIh/ORstcj7luStvvIHkisQi5SKw==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body{
+        font-family: monospace;
+        font-size: 1.3rem;
+        font-weight:500;
+    }
+    #nav{
+        background-color: rgb(128,0,0);
+        position: fixed;
+        width: 100%;
+        z-index: 2000;
+        top: 0;
+    }
+    
+    .dropdown-menu{
+        display: none;
+        z-index: 2000;
+    }
+    #x:hover .dropdown-menu{
+        display: block;
+       
+    }
+    .dropdown-menu a:hover{
+        background-color: #ddd;
+    }
+    #t{
+        height: 100%;
+        position: fixed;
+        margin-left: 0;
+        margin-top: 0;
+        padding:3rem;
+        width: 15rem;
+        text-align: center;
+        background-color:#e0e0e0 ;    
+    }
+    .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2E86C1;
+  overflow-x: hidden;
+  transition: 0.6s;
+  padding-top: 5.75rem;
+  margin-top:13.0rem;
+}
+
+.sidenav a {
+  padding:0.625rem 0.625rem 0.625rem 1.25rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover {
+  color: gainsboro;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 1.5625rem;
+  font-size: 2.25rem;
+  margin-left: 3.125rem;
+}
+
+@media screen and (max-height: 28.125rem) {
+  .sidenav {padding-top: 0.9375rem;}
+  .sidenav a {font-size: 1.125rem;}
+}
+    
+    .flip-card {
+  background-color: transparent;
+  width: 17.75rem;
+  height: 21.25rem;
+  perspective: 62.5rem;
+  box-shadow: 0 0.475rem 0.725rem 0 rgba(0,0,0,0.2); 
+  border-radius: 1.2rem;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 0.475rem 0.725rem 0 rgba(0,0,0,0.2);
+  border-radius: 1.2rem;
+}
+    img{
+        border-radius: 1.2rem 1.2rem 0 0;
+    }
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1.2rem;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 1.2rem;
+}
+
+.flip-card-back {
+  background-color: lightgrey;
+  color: black;
+  transform: rotateY(180deg);
+  border-radius: 1.2rem;
+}
+</style>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "15.625rem";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<body>
+<style>
+        
+        body {
+            font-family: sans-serif;
+    font-size: .85rem;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        #x:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #ddd;
+        }
+
+        li {
+            font-size: 1.1rem;
+        }
+
+        #t {
+            height: 100%;
+            position: fixed;
+            margin-left: 0;
+            margin-top: 0;
+            padding: 3rem;
+            width: 15rem;
+            text-align: center;
+            background-color: #e0e0e0;
+        }
+
+        /* Style the tab */
+        .tab {
+            float: left;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            width: 20%;
+            height: 600px;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            display: block;
+            background-color: inherit;
+            color: black;
+            padding: 22px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            float: left;
+            padding: 0px 12px;
+            border: 1px solid #ccc;
+            width: 80%;
+            border-left: none;
+            height: 600px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            text-decoration: none;
+            color: red;
+        }
+        #nav1{
+            background-color: #2874A6 ;
+        }
+        #nav2{
+            background-color: #2E86C1 ;
+        }
+       
+    </style>
+     <style>
+        body {
+            font-family: sans-serif;
+            font-size: .85rem;
+           /* font-weight: 500;*/
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        #x:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgb(135 168 214);
+            color: white;
+        }
+
+        #t {
+            height: 100%;
+            position: fixed;
+            margin-left: 0;
+            margin-top: 0;
+            padding: 3rem;
+            width: 15rem;
+            text-align: center;
+            background-color: rgb(135 168 214);
+        }
+    </style>
+
+    <div class="media " id="nav2">
+        <img src="images/logo_250.png" width="8%" height="8%" class="align-self-center mr-4 d-inline-block align-top ml-5" alt="" loading="lazy">
+        <div class="media-body">
+            <p>
+                <font color="white" style="font-family: sans-serif;">
+                    <h2 class="ml-3 mt-4">Department of Computer Science and Engineering</h2>
+                </font>
+            </p>
+            <font color="white" style="font-family: sans-serif;">
+                <h2 class="ml-3 "><b>Dr B R Ambedkar
+                        National Institute of Technology Jalandhar</b></h2>
+
+            </font>
+            <hr>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2874A6;">
+        <a class="navbar-brand ml-5" href="index.html"><i class="fa fa-home ml-5" aria-hidden="true"></i> Home
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown active ml-5" id="x">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-university" aria-hidden="true"></i> Academics
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">UG</a>
+                        <a class="dropdown-item" href="#">PG</a>
+                        <a class="dropdown-item" href="#">Phd</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown active ml-5" id="x">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-users" aria-hidden="true"></i> People
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="people.html">Faculty</a>
+                        <a class="dropdown-item" href="people.html">Staff</a>
+                        <a class="dropdown-item" href="people.html">Research Scholars</a>
+                        <a class="dropdown-item" href="people.html">Alumni</a>
+                    </div>
+                </li>
+
+                <li class="nav-item active ml-5">
+                    <a class="nav-link" href="#"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a>
+                </li>
+                <li class="nav-item active ml-5">
+                    <a class="nav-link" href="#"><i class="fa fa-handshake-o" aria-hidden="true"></i> Placements</a>
+                </li>
+                <li class="nav-item active ml-5">
+                    <a class="nav-link" href="research.html"><i class="fa fa-file-text" aria-hidden="true"></i> Research</a>
+                </li>
+                <li class="nav-item active ml-5">
+                    <a class="nav-link" href="facilities.html"><i class="fa fa-database" aria-hidden="true"></i> Facilities</a>
+                </li>
+                <li class="nav-item active ml-5">
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-phone" aria-hidden="true"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="main">
+<span style="font-size:1.5625rem;cursor:pointer;position: fixed;" onclick="openNav()">&nbsp;&#9776; </span>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Faculty</a>
+  <a href="#">Non-Teaching Staff</a>
+  <a href="#">Research Scholars</a>
+  <a href="#">Alumni</a>
+    </div>
+   
+    <div class="container mt-4">
+      <div class="h2 ml-5 mt-4">
+          FACULTY
+      </div>
+      <hr>
+       <div class="form-row ml-2">
+       <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+  <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+ <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+  <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+       <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+  <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+        <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+ <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+       <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+   </div>
+    </div>
+     <div class="container mt-5">
+      <div class="h2 ml-5">
+          NON-TEACHING STAFF
+      </div>
+      <hr>
+       <div class="form-row ml-2">
+       <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+       <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+  <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+ <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+       <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+  <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+      <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+  <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+       <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+ <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+       <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div></div>
+    </div>
+   
+     <div class="container mt-5">
+      <div class="h2 ml-5">
+          RESEARCH SCHOLARS
+      </div>
+      <hr>
+       <div class="form-row ml-2">
+       <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+       <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+  <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+        <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+ <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+       <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+  <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+        <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+  <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+       <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+ <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+       <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+   </div>
+    </div>
+      <div class="container mt-5">
+      <div class="h2 ml-5">
+            ALUMNI
+      </div>
+      <hr>
+       <div class="form-row ml-2">
+       <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+       <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+  <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+       <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:16.75rem;height:15.5rem; ">
+      <h4>NAME</h4>
+      <h5>POST <br>EMAIL ID </h5>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+ <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:18.75rem;height:17.5rem; ">
+      <h3>NAME</h3>
+      <h4>POST <br>EMAIL ID </h4>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+  <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:18.75rem;height:17.5rem; ">
+      <h3>NAME</h3>
+      <h4>POST <br>EMAIL ID </h4>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+  <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:18.75rem;height:17.5rem; ">
+      <h3>NAME</h3>
+      <h4>POST <br>EMAIL ID </h4>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+ <div class="flip-card ml-5 mt-5">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="pics/man-working-laptop-cartoon-icon-illustration_138676-1953.png" alt="Avatar" style="width:18.75rem;height:17.5rem; ">
+      <h3>NAME</h3>
+      <h4>POST <br>EMAIL ID </h4>
+    </div>
+    <div class="flip-card-back">
+      <h2>Interests</h2>
+      <h4>Profile link</h4>
+      <h4>info</h4>
+    </div>
+  </div>
+</div>
+   </div>
+    </div>
+    </div>
+
+</body>
+</html> 

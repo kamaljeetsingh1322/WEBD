@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdsnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+  input[type=text] {
+       height: 2.5rem;
+    width: 100%;
+    padding: 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+    select{
+        height: 2.5rem;
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+  input[type=submit] {
+    width: 20%;
+    background-color: green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+  }
+  div {
+    padding: 0.5rem;
+  }
+  input[type=number] {
+    width: 100%;
+    padding: 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+    hr{
+        border: 0.09rem dotted black;
+    }
+</style>
+</head>
+<body>
+  <div class="container-fluid" style="background-color:white; max-width: 500px;text-align: center"><h3 ><b><u>PLACEMENTS FORM</u></b></h3></div>
+<div class="container col-md-8" style="background-color:#CDCDCD;max-width: 750px">
+  <form class="mt-3">
+    <label for="batch"><b>Select the batch</b></label>
+    <select id="batch" name="department">
+      <option value=" "></option>
+      <option value="2017">2017</option>
+      <option value="2018">2018</option>
+      <option value="2019">2019</option>
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+    </select>
+
+  <div class="form-row">
+    <div class="col-md-6">
+     <label for=""><b>First Name</b></label>
+      <input type="text" class="form-control" placeholder="First name">
+    </div>
+    <div class="col-md-6">
+     <label for=""><b>Last Name</b></label>
+      <input type="text" class="form-control" placeholder="Last name">
+    </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-4">
+         <label for=""><b>Mobile No.</b></label>
+          <input type="text" class="form-control" placeholder=" ">
+        </div>
+        <div class="col-md-4">
+         <label for=""><b>Course Name</b></label>
+          <input type="email" class="form-control" placeholder="Course">
+        </div>
+        <div class="col-md-4">
+         <label for=""><b>Branch</b></label>
+          <input type="text" class="form-control" placeholder="branch">
+        </div>
+      </div><hr>
+          <div class="form-row">
+            <div class="col-md-4">
+             <label for=""><b>Roll No.</b></label>
+              <input type="text" class="form-control" placeholder=" ">
+            </div>
+            <div class="col-md-4">
+             <label for=""><b>Email-Id</b></label>
+              <input type="email" class="form-control" placeholder="Enter email">
+            </div>
+            <div class="col-md-4">
+              <label for="dept"><b>Select the Department</b></label>
+              <select id="dept" name="deapartment">
+                <option value=" "></option>
+                <option value="Bio">Bio-Technology</option>
+                <option value="Chemical">Chemical Engineering</option>
+                <option value="Civil">Civil Engineering</option>
+          <option value="Computer">Computer Engineering</option>
+          <option value="Electrical">Electrical Engineering</option>
+          <option value="Information">Information Technology</option>
+          <option value="Ipe">Industrial and production Engineering</option>
+              </select>
+            </div>
+          </div><hr>
+      <div class="mt-2 mb-2">
+<b>Select Student image to upload:</b>
+          <input type="file" name="fileToUpload" id="fileToUpload"></div><hr>
+<div class="form-row">
+  <div class="col"> <label for=""><b>Company Name</b></label>
+    <input type="text" class="form-control" placeholder="Company name">
+  </div>
+  <div class="col"> <label for=""><b>Package </b></label>
+    <input type="number" class="form-control" placeholder="package in &#8377">
+  </div>
+</div><hr>
+<input type="submit" value="Submit">
+</form>
+</div>
+  </body>
+  </html>

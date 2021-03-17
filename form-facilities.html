@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Simple form</title>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  input[type=text] {
+      height: 2.5rem;
+    width: 100%;
+    padding: 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+      color:black;
+  }
+     
+  input[type=submit] {
+    width:10%;
+    background-color: green;
+    color: black;
+    padding: 0.2rem 0.4rem;
+    margin: 0.18rem 0;
+    border: none;
+    cursor: pointer;
+      margin-bottom: 0.2rem;
+  }
+      input[type=submit]:hover {
+    width:10%;
+    background-color:forestgreen;
+    color: black;
+    padding: 0.2rem 0.4rem;
+    margin: 0.18rem 0;
+    border: none;
+    cursor: pointer;
+      margin-bottom: 0.2rem;
+  }
+  div {
+    background-color: white;
+  }
+  textarea {
+    width: 100%;
+    height: 8rem;
+    padding: 0.1rem 0.2rem;
+    box-sizing: border-box;
+    border: 0.08rem solid #ccc;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+    body{
+        font-family: monospace;
+        font-size: 1.3rem;
+        font-weight:500;
+    }
+   
+    #t{
+        height: 100%;
+        position: fixed;
+        margin-left: 0;
+        margin-top: 0;
+        padding:3rem;
+        width: 15rem;
+        text-align: center;
+        background-color:#e0e0e0 ;    
+    }
+    .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #CDCDCD;
+  overflow-x: hidden;
+  transition: 0.6s;
+  padding-top: 4.75rem;
+  margin-top:6.1rem;
+}
+
+#aa {
+  
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: black;
+  display: block;
+  transition: 0.3s;
+
+}
+
+#aa:hover {
+  color: darkred;
+      font-size: 1.33rem;
+}
+      a{
+          text-decoration: none;
+  font-size: 1.3rem;
+  color: black;
+  display: block;
+  transition: 0.3s;
+      }
+      a:hover{
+         color: black;
+      }
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 1.5625rem;
+  font-size: 2.25rem;
+  margin-left: 3.125rem;
+}
+
+@media screen and (max-height: 28.125rem) {
+  .sidenav {padding-top: 0.9375rem;}
+  .sidenav a {font-size: 1.125rem;}
+}
+      hr{
+          border-top: 0.09rem dotted black;
+}
+      }
+      #labform{
+          width:15rem;
+      }
+    </style>
+    <style>
+      select{
+             width: 100%;
+  padding: 0.5rem;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+        }
+#info {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+</style>
+<style>
+    #labform{
+        width: 70rem;
+        margin-left: 18rem;
+    }
+    #libform{
+        width: 70rem;
+        margin-left: 18rem;
+    }#seminarform{
+        width: 70rem;
+        margin-left: 18rem;
+    }#lectureform{
+        width: 70rem;
+        margin-left: 18rem;
+    }
+     #equipmentform{
+        width: 70rem;
+        margin-left: 18rem;
+    }
+    </style>
+
+</head>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "17.725rem";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<body>
+<center>
+    <h1><u><b>FACILTIES FORM</b></u></h1></center>
+   <span style="font-size:1.5625rem;cursor:pointer;position: fixed;" onclick="openNav()">&nbsp;&#9776; </span>
+   <div id="mySidenav" class="sidenav ml-2">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <hr>
+  <a href="#labform" class="ml-2" id="aa" onclick="openlabform()">Lab form</a><hr>
+  <a href="#equipmentform" class="ml-2" id="aa">Equipments form</a><hr>
+  <a href="#libform" class="ml-2" id="aa">Dep. Library Form</a><hr>
+  <a href="#seminarform" class="ml-2" id="aa">Seminar Halls Form</a><hr>
+   <a href="#lectureform" class="ml-2" id="aa">Lecture Halls Form</a><hr>
+    </div>
+    <div class="mt-5" id="info">
+    <div id="labform">
+    <h3 style="background-color:white;text-align: center;height:3rem;padding-top: 0.5rem;"><b>LAB INFORMATION FORM</b></h3>
+      <div class="container-fluid mt-2" style="background-color:#CDCDCD; ">
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+          <label class="mt-2" for="dept"><b>Select the Department</b></label>
+          <select id="dept" name="department" class="form-select" aria-label="Default select example">
+            <option value="Choose" selected>Choose</option>
+            <option value="Bio">Bio-Technology</option>
+            <option value="Chemical">Chemical Engineering</option>
+            <option value="Civil">Civil Engineering</option>
+      <option value="Computer">Computer Engineering</option>
+      <option value="Electrical">Electrical Engineering</option>
+      <option value="Information">Information Technology</option>
+      <option value="Ipe">Industrial and production Engineering</option>
+          </select>
+          <label for="labname"><b>Enter Lab name:</b></label><br>
+          <input type="text" id="labname" name="labname" value=" "><br>
+          <label for="labinfo"><b>Lab info in parts</b></label>
+          <textarea>Some text...</textarea>
+
+      <b>Select image to upload:</b>
+        <input type="file" name="fileToUpload" multiple id="fileToUpload">
+          <input type="submit" class="mb-2"value="Submit">
+        </form>
+      </div>
+    </div><hr><hr>
+  <!--================================equipmentform==============================================================-->
+<div id="equipmentform">
+<h3 style="background-color:white;text-align: center;height:3rem;padding-top: 0.5rem;"><b>EQUIPMENT INFORMATION FORM</b></h3>
+<div class="container-fluid" style="background-color:#CDCDCD">
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+    <label for="deptt" class="mt-2"><b>Select the Department</b></label>
+    <select id="deptt" name="deapartment">
+      <option value=" "></option>
+      <option value="Bio">Bio-Technology</option>
+      <option value="Chemical">Chemical Engineering</option>
+      <option value="Civil">Civil Engineering</option>
+<option value="Computer">Computer Engineering</option>
+<option value="Electrical">Electrical Engineering</option>
+<option value="Information">Information Technology</option>
+<option value="Ipe">Industrial and production Engineering</option>
+    </select>
+    <label for="labname"><b>Enter Lab/Equipment name:</b></label><br>
+          <input type="text" id="labname" name="labname" value=" "><br>
+    <label for="eqinfo">Equipment Description </label>
+    <textarea id="eqinfo">Some text...</textarea>
+    Select equipment image to upload:
+  <input type="file" name="fileToUpload" multiple id="fileToUpload">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+    </div><hr><hr>
+     <!--================================department library==============================================================-->
+<div id="libform">
+<h3 style="background-color:white;text-align: center;height:3rem;padding-top: 0.5rem;"><b>DEPARTMENT LIBRARY INFORMATION FORM</b></h3>
+<div class="container-fluid" style="background-color:#CDCDCD">
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+    <label for="deptt" class="mt-2"><b>Select the Department</b></label>
+    <select id="deptt" name="deapartment">
+      <option value=" "></option>
+      <option value="Bio">Bio-Technology</option>
+      <option value="Chemical">Chemical Engineering</option>
+      <option value="Civil">Civil Engineering</option>
+<option value="Computer">Computer Engineering</option>
+<option value="Electrical">Electrical Engineering</option>
+<option value="Information">Information Technology</option>
+<option value="Ipe">Industrial and production Engineering</option>
+    </select>
+    <label for="eqinfo">Department Library Description </label>
+    <textarea id="eqinfo">Some text...</textarea>
+    Select image to upload:
+  <input type="file" name="fileToUpload" multiple id="fileToUpload">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+    </div><hr><hr>
+     <!--================================seminar halls==============================================================-->
+<div id="seminarform">
+<h3 style="background-color:white;text-align: center;height:3rem;padding-top: 0.5rem;"><b>SEMINAR HALL INFORMATION FORM</b></h3>
+<div class="container-fluid" style="background-color:#CDCDCD">
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+    <label for="deptt" class="mt-2"><b>Select the Department</b></label>
+    <select id="deptt" name="deapartment">
+      <option value=" "></option>
+      <option value="Bio">Bio-Technology</option>
+      <option value="Chemical">Chemical Engineering</option>
+      <option value="Civil">Civil Engineering</option>
+<option value="Computer">Computer Engineering</option>
+<option value="Electrical">Electrical Engineering</option>
+<option value="Information">Information Technology</option>
+<option value="Ipe">Industrial and production Engineering</option>
+    </select>
+    <label for="eqinfo">Seminar Hall Description </label>
+    <textarea id="eqinfo">Some text...</textarea>
+    Select image to upload:
+  <input type="file" name="fileToUpload" multiple id="fileToUpload">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+    </div><hr><hr>
+     <!--================================lecture halls==============================================================-->
+<div id="lectureform">
+<h3 style="background-color:white;text-align: center;height:3rem;padding-top: 0.5rem;"><b>LECTURE HALL INFORMATION FORM</b></h3>
+<div class="container-fluid" style="background-color:#CDCDCD">
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+    <label for="deptt" class="mt-2"><b>Select the Department</b></label>
+    <select id="deptt" name="deapartment">
+      <option value=" "></option>
+      <option value="Bio">Bio-Technology</option>
+      <option value="Chemical">Chemical Engineering</option>
+      <option value="Civil">Civil Engineering</option>
+<option value="Computer">Computer Engineering</option>
+<option value="Electrical">Electrical Engineering</option>
+<option value="Information">Information Technology</option>
+<option value="Ipe">Industrial and production Engineering</option>
+    </select>
+    <label for="eqinfo">Library Description </label>
+    <textarea id="eqinfo">Some text...</textarea>
+    Select image to upload:
+  <input type="file" name="fileToUpload" multiple id="fileToUpload">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+        </div><hr><hr></div>
+</body>
+
+</html>

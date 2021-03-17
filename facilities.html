@@ -1,0 +1,830 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Required meta tags -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap/jquery-3.5.1.slim.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="jquery/jquery-1.8.2.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <script type="text/javascript">
+               var fxn = function() {
+ var now = new Date(), // current date
+         months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; // you get the idea
+         time = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds(), // again, you get the idea
+
+         // a cleaner way than string concatenation
+         date = [now.getDate(),
+                 months[now.getMonth()],
+                 now.getFullYear()].join(' ');
+
+   document.getElementById('time').innerHTML = [date, time].join(' / ');
+ }
+ setInterval(fxn, 1000);
+               </script>
+               <style>
+  .header11{
+    width: 100%;
+    height:-10%;
+}
+  .header{
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+  }
+
+  .header li{
+    float: right;
+  }
+
+  .header li a{
+    display: block;
+ color: white;
+ text-align: center;
+ padding: 5px;
+ text-decoration: none;
+  }
+
+  .header li a:hover{
+  background-color: #111111;
+}
+
+#time{
+  color: white;
+  float: left;
+}
+
+.pad{
+  padding-top: 3px;
+  padding-left: 5px;
+}
+
+
+</style>
+        <style>
+            #rot {
+            transform: rotate(18deg);
+            transition: ease all 3s;
+        }
+
+        #rot:hover {
+            transform: rotate(360deg);
+            transition: ease all 2s;
+        }
+        body {
+            font-family: monospace;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        #x:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #ddd;
+        }
+
+        #t {
+            height: 100%;
+            position: fixed;
+            margin-left: 0;
+            margin-top: 0;
+            padding: 3rem;
+            width: 15rem;
+            text-align: center;
+            background-color: #e0e0e0;
+        }
+    </style>
+
+       <style>
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        .footer-main-div {
+            width: 100%;
+            height: auto;
+            margin: auto;
+            background: #272727;
+            padding: 1px 0px;
+            border-radius: 20px;
+        }
+
+        .footer-social-icons {
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+
+        .footer-social-icons ul {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .footer-social-icons ul li {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin: 0px 10px;
+            border-radius: 100%;
+            background: grey;
+
+        }
+
+        .footer-social-icons ul li a {
+            color: #fff;
+            font-size: 25px;
+            display: block;
+        }
+
+        .footer-social-icons ul li a i {
+            line-height: 50px;
+        }
+
+        F.footer-menu-one {
+            width: auto;
+            height: auto;
+            margin: 20px;
+        }
+
+        .footer-menu-one ul {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .footer-menu-one ul li {
+            display: inline-block;
+            margin: 0px 15px;
+        }
+
+        .footer-menu-one ul li a {
+            font-family: arial;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .footer-bottom {
+            width: auto;
+            height: auto;
+            margin: auto;
+            background: grey;
+            padding: 1px;
+            border-radius: 20px;
+        }
+
+        .footer-bottom p {
+            font-family: arial;
+            font-size: 14px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .footer-note {
+
+            width: auto;
+            height: auto;
+            padding: 1px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .footer-note p {
+            font-style: arial;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-display: block;
+        }
+    </style>
+    <style>
+        
+/*
+        .fa {
+            padding: 20px;
+            font-size: 20px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 2px 30px;
+            border-radius: 50%;
+            position: relative;
+
+
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+*/
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+
+
+        }
+
+        .center {
+            text-align: center;
+            width: 20%;
+        }
+
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+            height: auto;
+        }
+
+        .carousel-item {
+            height: 100%;
+        }
+
+        .pos_image {
+            margin-left: 2px;
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        .img-resize {
+            image-resolution: 300dpi;
+            margin-top: 2px;
+            height: 100%;
+            margin-bottom: 5px;
+            
+
+        }
+
+        .textColor {
+            color: grey;
+            background-color: white;
+        }
+
+        .link {
+            background-color: blue;
+            color: white;
+        }
+
+        .backgroundColor {
+            background-color: white;
+
+            color: white;
+        }
+        #line{
+            border:1px white solid;
+        }
+        #try
+        {
+            background-color: rgb(128,0,0);
+        }
+        #try3
+        {
+          color: rgb(128,0,0);         
+        }
+        #try3:hover
+        {
+          color: rgb(128,0,0);    
+            text-shadow: 2px 2px 6px grey;
+            transform: scale(1.09);
+            transition: ease all 0.2s;
+        }
+        .tring
+        {
+          color: rgb(128,0,0);         
+        }
+        .tring:hover
+        {
+          color: rgb(128,0,0);    
+            text-shadow: 2px 2px 6px grey;
+            transform: scale(1.09);
+            transition: ease all 0.2s;
+        }
+        #try2
+        {
+            background-color: rgb(255,250,240);
+        }
+        
+    </style>
+<style>
+    #building{
+        background-image: url(pics/NEW-GRAD-banner.jpg);
+            background-blend-mode: darken;
+                background-repeat: no-repeat;
+ color: white;
+                background-size:cover;
+    }
+            #carda {
+            box-shadow: 5px 5px 5px 5px grey;
+            border-radius: 40px 0px 0px 0px;
+            background: rgb(128,0,0);
+            background-image: url(pics/workshop.jpg);
+            background-blend-mode: darken;
+                background-repeat: no-repeat;
+ color: white;
+                background-size:cover;
+
+        }
+
+        #cardb {
+            box-shadow: 5px 5px 5px 5px grey;
+            border-radius: 0px 0px 0px 40px;
+          background: rgb(128,0,0);
+            color: white;
+            background-image: url(pics/result.jpg);
+            background-blend-mode: darken;
+background-repeat: no-repeat;
+
+                background-size:cover;
+        }
+
+        #cardd {
+            box-shadow: 5px 5px 5px 5px grey;
+            border-radius: 0px 0px 40px 0px;
+            background: rgb(128,0,0);
+            color: white;
+            background-image: url(pics/people.jpg);
+
+            background-blend-mode:darken;
+background-repeat: no-repeat;
+
+                background-size:cover;
+        }
+
+        #cardc {
+            box-shadow: 5px 5px 5px 5px grey;
+            border-radius: 0px 40px 0px 0px;
+            background: rgb(128,0,0);
+            color: white;
+            background-image: url(pics/clock.jpg);
+
+            background-blend-mode:darken;
+             background-repeat: no-repeat;
+
+                background-size:cover;
+
+        }
+
+        #carda:hover {
+            box-shadow: 6px 6px 6px 6px black;
+            background-color: powderblue;
+            transform: rotate(3deg);
+            color: black;
+            background-blend-mode: overlay;
+            transform: scale(1.09);
+            transition: ease all 0.5s;
+            caret-color: black;
+
+        }
+
+        #cardd:hover {
+            box-shadow: 6px 6px 6px 6px black;
+            background-color: powderblue;
+            transform: rotate(3deg);
+            color: black;
+            background-blend-mode: overlay;
+            transform: scale(1.09);
+            transition: ease all 0.5s;
+
+        }
+
+        #cardb:hover {
+            box-shadow: 6px 6px 6px 6px black;
+            background-color: powderblue;
+            transform: rotate(3deg);
+            color: black;
+            background-blend-mode: overlay;
+            transform: scale(1.09);
+            transition: ease all 0.5s;
+        }
+
+        #cardc:hover {
+            box-shadow: 6px 6px 6px 6px black;
+            background-color: powderblue;
+            transform: rotate(3deg);
+            color: black;
+            background-blend-mode: overlay;
+            transform: scale(1.09);
+            transition: ease all 0.5s;
+        }
+    
+    #stbtn{
+        color:white;
+        background-color: rgb(128,0,0);
+            transition: ease all 0.3s;
+        text-decoration-line: none;
+        text-decoration-color: none;
+    }
+    #stbtn:hover{
+        color:black;
+        background-color:powderblue;
+        box-shadow: 6px 6px 6px 6px black;
+        transform: scale(1.05);
+            transition: ease all 0.3s;
+        text-decoration-line: none;
+        text-decoration-color: none;
+    }
+    #st{
+        text-decoration: inherit;
+    }
+    </style>
+</head>
+
+<body>
+   <div class="header11">
+<ul class="header">
+  <li><a href=" https://www.nitj.ac.in/cot">Training &nbsp;</a></li>
+  <li><a href=" https://www.nitj.ac.in/index.php/nitj_cinfo/index/64">Placements | </a></li>
+<li><a href="https://www.nitjalumni.org/">Alumni | </a></li>
+  <li><a href=" https://www.nitj.ac.in/index.php/home/Contact_Us ">Contact | </a></li>
+    <li><a href=" https://www.nitj.ac.in/index.php/nitj_cinfo/pages/21 ">Phone Book | </a></li>
+    <li><a href="https://www.google.com/a/nitj.ac.in/" target="_blank">Webmail | </a></li>
+    <div id="time" class="pad"> </div>
+       </ul>
+  </div>
+            <style>
+        
+        body {
+            font-family: sans-serif;
+    font-size: .85rem;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        #x:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #ddd;
+        }
+
+        li {
+            font-size: 1.1rem;
+        }
+
+        #t {
+            height: 100%;
+            position: fixed;
+            margin-left: 0;
+            margin-top: 0;
+            padding: 3rem;
+            width: 15rem;
+            text-align: center;
+            background-color: #e0e0e0;
+        }
+
+        /* Style the tab */
+        .tab {
+            float: left;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            width: 20%;
+            height: 600px;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            display: block;
+            background-color: inherit;
+            color: black;
+            padding: 22px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            float: left;
+            padding: 0px 12px;
+            border: 1px solid #ccc;
+            width: 80%;
+            border-left: none;
+            height: 600px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            text-decoration: none;
+            color: black;
+        }
+        #nav1{
+            background-color: #2874A6 ;
+        }
+        #nav2{
+            background-color: #2E86C1 ;
+        }
+       
+    </style>
+     <style>
+        body {
+            font-family: sans-serif;
+            font-size: .85rem;
+           /* font-weight: 500;*/
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        #x:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgb(135 168 214);
+            color: white;
+        }
+
+        #t {
+            height: 100%;
+            position: fixed;
+            margin-left: 0;
+            margin-top: 0;
+            padding: 3rem;
+            width: 15rem;
+            text-align: center;
+            background-color: rgb(135 168 214);
+        }
+    </style>
+
+    <div class="media " id="nav2">
+        <img src="images/logo_250.png" width="8%" height="8%" class="align-self-center mr-4 d-inline-block align-top ml-5" alt="" loading="lazy">
+        <div class="media-body">
+            <p>
+                <font color="white" style="font-family: sans-serif;">
+                    <h2 class="ml-3 mt-4">Department of Computer Science and Engineering</h2>
+                </font>
+            </p>
+            <font color="white" style="font-family: sans-serif;">
+                <h2 class="ml-3 "><b>Dr B R Ambedkar
+                        National Institute of Technology Jalandhar</b></h2>
+
+            </font>
+            <hr>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2874A6;">
+        <a class="navbar-brand ml-5" href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown active ml-5" id="x">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-university" aria-hidden="true"></i> Academics
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">UG</a>
+                        <a class="dropdown-item" href="#">PG</a>
+                        <a class="dropdown-item" href="#">Phd</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown active ml-5" id="x">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-users" aria-hidden="true"></i> People
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="people.html">Faculty</a>
+                        <a class="dropdown-item" href="people.html">Staff</a>
+                        <a class="dropdown-item" href="people.html">Research Scholars</a>
+                        <a class="dropdown-item" href="people.html">Alumni</a>
+                    </div>
+                </li>
+
+                <li class="nav-item active ml-5">
+                    <a class="nav-link" href="#"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a>
+                </li>
+                <li class="nav-item active ml-5">
+                    <a class="nav-link" href="#"><i class="fa fa-handshake-o" aria-hidden="true"></i> Placements</a>
+                </li>
+                <li class="nav-item active ml-5">
+                    <a class="nav-link" href="research.html"><i class="fa fa-file-text" aria-hidden="true"></i> Research</a>
+                </li>
+                <li class="nav-item active ml-5">
+                    <a class="nav-link" href="facilities.html"><i class="fa fa-database" aria-hidden="true"></i> Facilities</a>
+                </li>
+                <li class="nav-item active ml-5">
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-phone" aria-hidden="true"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <style>
+	.tabContainer{
+	width:100%;
+	height:18.75rem;
+
+
+}
+
+@media screen and (max-width:511px){
+  
+  	.tabContainer .buttonContainer button{
+
+width:25%;
+  }
+
+  }
+
+.tabContainer .buttonContainer{
+
+	height: 15%;
+    margin-left: 5px;
+   
+}
+button{
+	border: .03125rem solid rgb(135 168 214);
+	text-align: center;
+	
+}
+
+.tabContainer .buttonContainer button{
+
+width:15%;
+height: 100%;
+float: left;
+margin-right: 5px;
+outline: none;
+cursor: pointer;
+padding: .25rem;
+font-family: sans-serif;
+font-size:.75rem;
+color:white;
+background-color: rgb(135 168 214);
+margin:auto;
+
+}
+
+.tabContainer .buttonContainer button:hover{
+background-color:rgb(135 168 214);
+color: black;
+
+}
+
+.tabContainer .tabPanel{
+margin-top: 10px;
+height: 90%;
+background-color:rgb(135 168 214);
+border: .03125rem solid rgb(135 168 214);
+color:black;
+text-align: center; 
+padding-top: 6.5625rem;
+box-sizing: border-box;
+font-family: sans-serif;
+font-size: 1.375rem;
+display: none;
+
+
+
+}
+
+</style>
+    <section style="padding:30px">
+	<div class="tabContainer">
+		
+<div class="buttonContainer">
+	<button style="margin: 5px;" onclick="showPanel(0,'#fff')">Laboratories</button>
+	<button style="margin: 5px;" onclick="showPanel(1,'#fff')">Department Library</button>
+	<button style="margin: 5px;" onclick="showPanel(2,'#fff')">Lecture Halls</button>
+	<button style="margin: 5px;" onclick="showPanel(3,'#fff')">Seminar Halls</button>
+	<!--<button onclick="showPanel(3,'#fff')">Tab 3</button>-->
+
+</div>
+
+<div class="tabPanel" >Tab 1:Laboratories
+</div>
+<div class="tabPanel" >Tab 2:Department Library
+
+</div>
+<div class="tabPanel" >Tab 3:Lecture Halls
+</div>
+<div class="tabPanel" >Tab 4:Seminar Halls
+</div>
+
+<!--<div class="tabPanel" >Tab 4:container
+
+</div>-->
+
+	</div>
+	
+
+</section>
+<script >
+	var tabButtons=document.querySelectorAll(".tabContainer .buttonContainer button");
+var tabPanels=document.querySelectorAll(".tabContainer .tabPanel");
+
+
+function showPanel(panelIndex,colorCode){
+	tabButtons.forEach(function(node){
+		node.style.backgroundColor="";
+		node.style.color=""
+	});
+
+	
+
+	tabButtons[panelIndex].style.backgroundColor=colorCode;
+	tabButtons[panelIndex].style.color="black";
+	tabPanels.forEach(function(node){
+		node.style.display="none";
+
+	})
+	tabPanels[panelIndex].style.display="block";
+	tabPanels[panelIndex].style.backgroundColor=colorCode;
+
+}
+
+showPanel(0,'#fff');</script> 
+   
+   
+   
+   
+   
+    <div class="footer-main-div mt-3">
+        <div class="footer-note">
+            <p>Department of computer science, nit jalandhar</p>
+            <div class="footer-social-icons">
+                <ul>
+                    <li><a href="https://www.facebook.com/NITJofficial" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.twitter.com/NITJofficial" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/c/NITJofficial" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://www.linkedin.com/school/dr-b-r-ambedkar-national-institute-of-technology-jalandhar-official" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/nitjofficial" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-menu-one">
+                <ul>
+                    <li><a href="https://www.nitj.ac.in/index.php/nitj_cinfo/OtherNIT">Other NITs</a></li>
+                    <li><a href="https://www.nitj.ac.in/index.php/nitj_cinfo/Credits">Credits</a></li>
+                    <li><a href="https://www.nitj.ac.in/index.php/nitj_cinfo/MOU">MOU</a></li>
+                    <li><a href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/19">Terms of Use</a></li>
+                    <li><a href="https://www.nitj.ac.in/index.php/nitj_cinfo/pages/20">Anti Ragging</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Copyright 2016-2020, All Rights Reserved NIT Jalandhar</p>
+        </div>
+    </div> 
+</body></html>
